@@ -12,6 +12,7 @@ public class TheList {
         // colorsImmutable.add("blue"); // not working
 
         List<String> colors = new ArrayList<>();
+
         colors.add("blue");
         colors.add("purple");
         colors.add("yellow");
