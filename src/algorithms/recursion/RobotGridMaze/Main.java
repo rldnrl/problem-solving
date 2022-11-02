@@ -1,4 +1,4 @@
-package algorithms.recursion.RobotGrid;
+package algorithms.recursion.RobotGridMaze;
 
 import java.awt.Point;
 import java.util.LinkedHashSet;
@@ -29,7 +29,7 @@ public class Main {
         maze[3][3]=true;
 
         // 경로를 계산하고 표시합니다.
-        RobotGrid.computePath(5, 5, maze, path);
+        RobotGridMaze.computePath(5, 5, maze, path);
 
         System.out.println("Computed path (plain recursion):");
         path.forEach(System.out::println);
