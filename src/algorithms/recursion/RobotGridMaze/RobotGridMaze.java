@@ -10,7 +10,7 @@ public class RobotGridMaze {
             return false;
         }
 
-        // 예외 케이스2
+        // 못 가는 부분
         if (maze[m][n]) {
             return false;
         }
