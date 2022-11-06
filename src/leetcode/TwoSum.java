@@ -18,8 +18,6 @@ public class TwoSum {
             if (hashMap.containsKey(target - nums[i]) && hashMap.get(target - nums[i]) != i) {
                 result[1] = hashMap.get(target - nums[i]);
                 break;
-            } else {
-                result[0] = 0;
             }
         }
 
