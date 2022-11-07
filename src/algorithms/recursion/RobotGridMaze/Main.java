@@ -1,6 +1,7 @@
 package algorithms.recursion.RobotGridMaze;
 
 import java.awt.Point;
+import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
@@ -31,6 +32,21 @@ public class Main {
         RobotGridMaze.computePath(1, 1, maze2, path2);
 
         System.out.println("Computed path2 (plain recursion):");
+        path2.forEach(System.out::println);
+
+        Set<Point> visited1 = new HashSet<>();
+
+        // 경로를 계산하고 표시합니다.
+        RobotGridMaze.computePath(5, 5, maze1, path1, visited1);
+
+        System.out.println("\nComputed path (Memoization):");
+        path1.forEach(System.out::println);
+
+        Set<Point> visited2 = new HashSet<>();
+
+        RobotGridMaze.computePath(1, 1, maze2, path2, visited2);
+
+        System.out.println("Computed path2 (Memoization):");
         path2.forEach(System.out::println);
     }
 }
