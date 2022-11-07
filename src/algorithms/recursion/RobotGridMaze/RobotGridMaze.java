@@ -22,4 +22,27 @@ public class RobotGridMaze {
 
         return false;
     }
+
+    public static boolean computePath(int m, int n, boolean[][] maze, Set<Point> path, Set<Point> cell) {
+        if (m < 0 || n < 0) {
+            return false;
+        }
+
+        if (maze[m][n]) {
+            return false;
+        }
+
+        if (cell.contains(new Point(m, n))) {
+            return false;
+        }
+
+        if ((m == 0 && n == 0) || computePath(m - 1, n, maze, path, cell) || computePath(m, n - 1, maze, path, cell)) {
+            path.add(new Point(m, n));
+            return true;
+        }
+
+        cell.add(new Point(m, n));
+
+        return false;
+    }
 }
