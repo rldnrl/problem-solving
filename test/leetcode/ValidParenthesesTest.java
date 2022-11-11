@@ -9,16 +9,19 @@ public class ValidParenthesesTest {
         String s1 = "()";
         Assertions.assertTrue(ValidParentheses.isValid(s1));
 
-        String s2 = "()[]{}";
-        Assertions.assertTrue(ValidParentheses.isValid(s2));
+        String s2 = "(((";
+        Assertions.assertFalse(ValidParentheses.isValid(s2));
 
-        String s3 = "(]";
-        Assertions.assertFalse(ValidParentheses.isValid(s3));
+        String s3 = "()[]{}";
+        Assertions.assertTrue(ValidParentheses.isValid(s3));
 
-        String s4 = "}}}}}";
+        String s4 = "(]";
         Assertions.assertFalse(ValidParentheses.isValid(s4));
 
-        String s5 = "{[{]]]]";
+        String s5 = "}}}}}";
         Assertions.assertFalse(ValidParentheses.isValid(s5));
+
+        String s6 = "{[{]]]]";
+        Assertions.assertFalse(ValidParentheses.isValid(s6));
     }
 }
