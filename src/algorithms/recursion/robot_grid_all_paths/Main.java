@@ -1,4 +1,4 @@
-package algorithms.recursion.RobotGridAllPaths;
+package algorithms.recursion.robot_grid_all_paths;
 
 public class Main {
     public static void main(String[] args) {

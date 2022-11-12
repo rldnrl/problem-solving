@@ -1,4 +1,4 @@
-package algorithms.recursion.RobotGridAllPaths;
+package algorithms.recursion.robot_grid_all_paths;
 
 public class RobotGridAllPaths {
     public static int countPaths(int m, int n) {
