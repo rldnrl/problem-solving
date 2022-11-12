@@ -1,4 +1,4 @@
-package algorithms.recursion.RobotGridMaze;
+package algorithms.recursion.robot_grid_maze;
 
 import java.awt.*;
 import java.util.Set;
