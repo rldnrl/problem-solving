@@ -23,10 +23,10 @@ public class CharacterOnlyOnce {
             }
         }
 
-        char[] answerCharArray = answer.toString().toCharArray();
+        String[] answerCharArray = answer.toString().split("");
         Arrays.sort(answerCharArray);
 
-        return new String(answerCharArray);
+        return String.join("", answerCharArray);
     }
 
     public static void main(String[] args) {
