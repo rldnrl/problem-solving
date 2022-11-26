@@ -5,7 +5,7 @@ package leetcode;
  */
 public class MaximumSubarray {
     /**
-     * Time Complex: O(n^3)
+     * Time Complexity: O(n^3)
      */
     public static int maxSubarrayWithBruteforce(int[] nums) {
         int max = Integer.MIN_VALUE;
@@ -23,7 +23,24 @@ public class MaximumSubarray {
     }
 
     /**
-     * Time Complex: O(n)
+     * Time Complexity: O(n^2)
+     */
+    public static int maxSubarrayWithBruteforceOptimized(int[] nums) {
+        int maxSub = Integer.MIN_VALUE;
+
+        for (int i = 0; i < nums.length; i++) {
+            int curSum = 0;
+            for (int j = i; j < nums.length; j++) {
+                curSum += nums[j];
+                maxSub = Math.max(maxSub, curSum);
+            }
+        }
+
+        return maxSub;
+    }
+
+    /**
+     * Time Complexity: O(n)
      */
     public static int maxSubarrayWithSlidingWindow(int[] nums) {
         int maxSub = nums[0];
