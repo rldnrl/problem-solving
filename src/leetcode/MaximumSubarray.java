@@ -6,8 +6,6 @@ package leetcode;
 public class MaximumSubarray {
     /**
      * Time Complex: O(n^3)
-     * @param nums
-     * @return
      */
     public static int maxSubarrayWithBruteforce(int[] nums) {
         int max = Integer.MIN_VALUE;
