@@ -32,5 +32,9 @@ class MaximumSubarrayTest {
         int[] nums3 = new int[]{5,4,-1,7,8};
         int result3 = 23;
         Assertions.assertEquals(MaximumSubarray.maxSubarrayWithSlidingWindow(nums3), result3);
+
+        int[] nums4 = new int[]{-5, -4,-1, -7, -8};
+        int result4 = -1;
+        Assertions.assertEquals(MaximumSubarray.maxSubarrayWithSlidingWindow(nums4), result4);
     }
 }
