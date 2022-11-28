@@ -1,14 +1,15 @@
 class Solution {
     public void reverseString(char[] s) {
-        int left = 0;
-        int right = s.length - 1;
+        Stack<Character> stack = new Stack<>();
 
-        while (left < right) {
-            char temp = s[left];
-            s[left] = s[right];
-            s[right] = temp;
-            left++;
-            right--;
+        for (char c: s) {
+            stack.push(c);
+        }
+
+        int index = 0;
+        while(!stack.isEmpty()) {
+            s[index] = stack.pop();
+            index++;
         }
     }
 }
