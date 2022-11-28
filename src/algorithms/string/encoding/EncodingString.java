@@ -32,4 +32,23 @@ public class EncodingString {
 
         return str;
     }
+
+    public static char[] encodeWhitespacesWithReplace(char[] str) {
+        StringBuilder sb = new StringBuilder();
+
+        for (char c: str) {
+            sb.append(c);
+        }
+
+        String input = sb.toString();
+        input = input.replace(" ", "%20");
+
+        char[] encodedStr = new char[input.length()];
+
+        for (int i = 0; i < input.length(); i++) {
+            encodedStr[i] = input.charAt(i);
+        }
+
+        return encodedStr;
+    }
 }
