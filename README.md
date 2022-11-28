@@ -9,6 +9,8 @@
 | 5   | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)           | [Java](https://github.com/rldnrl/java-coding-interview/blob/main/0005-longest-palindromic-substring/0005-longest-palindromic-substring.java)           |
 | 217 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)                                 | [Java](https://github.com/rldnrl/java-coding-interview/blob/main/0217-contains-duplicate/0217-contains-duplicate.java)                                 |
 | 387 | [First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/) | [Java](https://github.com/rldnrl/java-coding-interview/blob/main/0387-first-unique-character-in-a-string/0387-first-unique-character-in-a-string.java) |
+| 53  | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)                                     | [Java](https://github.com/rldnrl/java-coding-interview/blob/main/0053-maximum-subarray/0053-maximum-subarray.java)                                     |
+| 344 | [Reverse String](https://leetcode.com/problems/reverse-string/)                                         | [Java](https://github.com/rldnrl/java-coding-interview/blob/main/0344-reverse-string/0344-reverse-string.java)                                         |
 
 ## Java Data Structure Tip
 ### HashMap
