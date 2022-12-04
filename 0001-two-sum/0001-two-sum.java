@@ -11,7 +11,7 @@ class Solution {
             result[0] = i;
             if (hashMap.containsKey(target - nums[i]) && hashMap.get(target - nums[i]) != i) {
                 result[1] = hashMap.get(target - nums[i]);
-                break;
+                return result;
             }
         }
         
