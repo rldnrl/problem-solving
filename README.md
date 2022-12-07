@@ -18,3 +18,7 @@
 
 ### Character
 - `isWhiteSpace(char c)`: `c`가 공백이면 `true`, 그렇지 않으면 `false`
+
+### 비교 연산자
+- `!=`를 사용하는 것보다, `Objects.equals()`를 사용하는 것이 좋다.
+  - [Valid Anagram](https://leetcode.com/problems/valid-anagram/)을 풀었을 때, 동일한 값인데 다른 경우가 있었음.
