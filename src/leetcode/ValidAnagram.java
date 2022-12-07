@@ -38,7 +38,7 @@ public class ValidAnagram {
         return true;
     }
 
-    public static boolean isValidWithSort(String s, String t) {
+    public static boolean isAnagramWithSort(String s, String t) {
         char[] arrayOfS = s.toCharArray();
         char[] arrayOfT = t.toCharArray();
 
