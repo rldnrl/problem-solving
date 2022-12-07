@@ -13,15 +13,14 @@ class Solution {
             countOfT.put(c, countOfT.getOrDefault(c, 0) + 1);
         }
 
-        System.out.print(countOfS);
-        System.out.print(countOfT);
-
-        for (char c: countOfS.keySet()) {
+        for (Map.Entry<Character, Integer> entry: countOfS.entrySet()) {
+            char c = entry.getKey();
+            int count = entry.getValue();
             if (!countOfT.containsKey(c)) {
                 return false;
             }
 
-            if (!Objects.equals(countOfS.get(c), countOfT.get(c))) {
+            if (!Objects.equals(count, countOfT.get(c))) {
                 return false;
             }
         }
