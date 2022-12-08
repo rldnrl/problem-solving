@@ -13,4 +13,17 @@ public class RotateRightArray {
             k = (k + 1) % size;
         }
     }
+
+    public static void rotateRightWithBruteforce(int[] nums, int k) {
+        int size = nums.length;
+
+        while (k > 0) {
+            int last = nums[size - 1];
+            for (int i = size - 2; i >= 0; i--) {
+                nums[i+1] = nums[i];
+            }
+            nums[0] = last;
+            k--;
+        }
+    }
 }
