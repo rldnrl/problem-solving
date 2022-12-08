@@ -20,9 +20,6 @@ public class ValidAnagram {
             countOfT.put(c, countOfT.getOrDefault(c, 0) + 1);
         }
 
-        System.out.print(countOfS);
-        System.out.print(countOfT);
-
         for (Map.Entry<Character, Integer> entry: countOfS.entrySet()) {
             char c = entry.getKey();
             int count = entry.getValue();
@@ -46,5 +43,24 @@ public class ValidAnagram {
         Arrays.sort(arrayOfT);
 
         return Arrays.equals(arrayOfS, arrayOfT);
+    }
+
+    public static boolean isAnagramWithFrequency(String s, String t) {
+        if (s.length() != t.length()) return false;
+
+        int[] count = new int[26];
+
+        for (int i = 0; i < s.length(); i++) {
+            count[s.charAt(i) - 'a']++;
+            count[t.charAt(i) - 'a']--;
+        }
+
+        for (int c: count) {
+            if (c != 0) {
+                return false;
+            }
+        }
+
+        return true;
     }
 }
