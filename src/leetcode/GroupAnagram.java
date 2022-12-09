@@ -15,13 +15,8 @@ public class GroupAnagram {
 
         for (String s: strs) {
             String sortedS = sortString(s);
-            if (map.containsKey(sortedS)) {
-                map.get(sortedS).add(s);
-            } else {
-                List<String> newValue = new ArrayList<>();
-                newValue.add(s);
-                map.put(sortedS, newValue);
-            }
+            map.computeIfAbsent(sortedS, k -> new ArrayList<>());
+            map.get(sortedS).add(s);
         }
 
         for (Map.Entry<String, List<String>> entry: map.entrySet()) {
