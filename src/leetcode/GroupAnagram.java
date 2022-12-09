@@ -9,7 +9,7 @@ public class GroupAnagram {
         return String.join("", arrayOfS);
     }
 
-    public static List<List<String>> groupAnagramsWithHashMap(String[] strs) {
+    public static List<List<String>> groupAnagramsWithSort(String[] strs) {
         List<List<String>> result = new ArrayList<>();
         Map<String, List<String>> map = new HashMap<>();
 
