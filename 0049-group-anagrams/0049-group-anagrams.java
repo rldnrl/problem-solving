@@ -6,7 +6,6 @@ class Solution {
     }
 
     public List<List<String>> groupAnagrams(String[] strs) {
-        List<List<String>> result = new ArrayList<>();
         Map<String, List<String>> map = new HashMap<>();
 
         for (String s: strs) {
@@ -15,10 +14,6 @@ class Solution {
             map.get(sortedS).add(s);
         }
 
-        for (Map.Entry<String, List<String>> entry: map.entrySet()) {
-            result.add(entry.getValue());
-        }
-
-        return result;
+        return new ArrayList<>(map.values());
     }
 }
