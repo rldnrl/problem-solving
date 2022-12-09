@@ -15,6 +15,20 @@
 ## Java Data Structure Tip
 ### HashMap
 - `getOrDefault(Key, DefaultValue)`: `Key`가 존재하면, 해당 `Key`의 `Value`를 반환하고, 없으면 `Default Value`로 설정한 값을 반환하는 메서드
+- `computeIfAbsent(key, mappintFunction)`:
+
+  1. null이 아닌 값과 관련된 Key<br>
+     먼저 키가 맵에 있는지 확인한다. Key가 있고 `null`이 아닌 값이 Key와 관련된 경우 해당 값을 반환.
+     
+  2. 매핑 함수를 사용하여 Value 계산<br>
+     또한 Key가 맵에 없거나 `null` 값이 Key와 관련된 경우 지정된 `mappingFunction`을 사용하여 값을 계산하려고 시도한다. 또한 계산된 값이 `null`이 아니면 계산된 값을 맵에 입력한다.
+
+  3. 매핑 함수가 null을 반환하는 경우<br>
+     또한 `mappingFunction`이 `null`을 반환하는 경우 맵은 매핑을 기록하지 않는다.
+
+  4. 매핑 함수에서 예외 발생
+     마지막으로 `mappingFunction`이 확인되지 않은 예외를 발생시키면 예외가 다시 발생하고 맵은 매핑을 기록하지 않는다.
+
 
 ### Character
 - `isWhiteSpace(char c)`: `c`가 공백이면 `true`, 그렇지 않으면 `false`
