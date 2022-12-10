@@ -39,3 +39,5 @@
   - `String Literal`로 할당한 값과 `String.valueOf`을 이용해서 `String` 객체로 만든 값을 비교할 때도 유용.
     - 같은 값을 담아도 `==` 연산자로 비교하면 `false를` 반환.
     - 같은 값을 `Objects.equals()`를 사용할 경우 `true`를 반환.
+- 두 배열이 같은지 확인하기
+  - `Arrays.equals()`를 이용하면 된다.
