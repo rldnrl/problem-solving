@@ -36,3 +36,6 @@
 ### 비교 연산자
 - `!=`, `==`를 사용하는 것보다, `Objects.equals()`를 사용하는 것이 좋다.
   - [Valid Anagram](https://leetcode.com/problems/valid-anagram/)을 풀었을 때, 동일한 값인데 다른 경우가 있었음.
+  - `String Literal`로 할당한 값과 `String.valueOf`을 이용해서 `String` 객체로 만든 값을 비교할 때도 유용.
+    - 같은 값을 담아도 `==` 연산자로 비교하면 `false를` 반환.
+    - 같은 값을 `Objects.equals()`를 사용할 경우 `true`를 반환.
