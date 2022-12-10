@@ -1,19 +1,20 @@
 class Solution {
-    public static String sortString(String s) {
-        String[] arrayOfS = s.split("");
-        Arrays.sort(arrayOfS);
-        return String.join("", arrayOfS);
-    }
-
     public List<List<String>> groupAnagrams(String[] strs) {
+        List<List<String>> result = new ArrayList();
         Map<String, List<String>> map = new HashMap<>();
-
-        for (String s: strs) {
-            String sortedS = sortString(s);
-            map.computeIfAbsent(sortedS, k -> new ArrayList<>());
-            map.get(sortedS).add(s);
+        
+        for (String str: strs) {
+            char[] count = new char[26];
+            for (char c: str.toCharArray()) {
+                count[c - 'a']++;
+            }
+            String key = new String(count);
+            map.computeIfAbsent(key, k -> new ArrayList());
+            map.get(key).add(str);
         }
-
-        return new ArrayList<>(map.values());
+        
+        result.addAll(map.values());
+        
+        return result;
     }
 }
