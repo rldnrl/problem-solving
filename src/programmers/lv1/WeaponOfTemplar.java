@@ -1,10 +1,5 @@
 package programmers.lv1;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-
 public class WeaponOfTemplar {
     public static int solutionWithBruteforce(int number, int limit, int power) {
         int[] arrayOfCount = new int[number];
