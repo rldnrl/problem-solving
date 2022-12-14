@@ -29,7 +29,31 @@
 
   4. 매핑 함수에서 예외 발생
      마지막으로 `mappingFunction`이 확인되지 않은 예외를 발생시키면 예외가 다시 발생하고 맵은 매핑을 기록하지 않는다.
-
+- `Value`를 기준으로 정렬하기
+  - `List`에 `entrySet()`을 넣어서 정렬하는 방법
+  
+    ```java
+    Map<Integer, Integer> map = new HashMap<>();
+    map.put(1, 2);
+    map.put(2, 1);
+    map.put(3, 8);
+    
+    List<Map.Entry<Integer, Integer>> entryList = new ArrayList<>(map.entrySet());
+    
+    // 오름차순 정렬
+    // 1. 람다를 이용하는 방법
+    entryList.sort((a, b) -> a.getValue() - b.getValue()); // {2=1, 1=2, 3=8}
+    
+    // 2. Map.Entry에 내장 함수를 사용하는 방법
+    entryList.sort(Map.Entry.comparingByValue()); // {2=1, 1=2, 3=8}
+    
+    // 내림차순 정렬
+    // 1. 람다를 이용하는 방법
+    entryList.sort((a, b) -> b.getValue() - a.getValue()); // {3=8, 1=2, 2=1}
+    
+    // 2. Map.Entry에 내장 함수를 사용하는 방법
+    entryList.sort(Map.Entry.comparingByValue().reversed()); // {3=8, 1=2, 2=1}
+    ```
 
 ### Character
 - `isWhiteSpace(char c)`: `c`가 공백이면 `true`, 그렇지 않으면 `false`
