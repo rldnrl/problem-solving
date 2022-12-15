@@ -13,10 +13,11 @@ class Solution {
 
         int i = 0;
         for (Map.Entry<Integer, Integer> entry: entryList) {
-            if (i != k) {
-                answer[i] = entry.getKey();
-                i++;
+            if (i == k) {
+                return answer;
             }
+            answer[i] = entry.getKey();
+            i++;
         }
 
         return answer;
