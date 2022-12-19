@@ -50,9 +50,9 @@ public class TopKFrequencyElements {
         int[] answer = new int[k];
         for (int count = nums.length; count >= 0; count--) {
             for (int element: bucket.get(count)) {
-                if (index != k) {
-                    answer[index] = element;
-                    index++;
+                answer[index++] = element;
+                if (index == k) {
+                    return answer;
                 }
             }
         }
