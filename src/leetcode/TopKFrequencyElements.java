@@ -3,6 +3,10 @@ package leetcode;
 import java.util.*;
 
 public class TopKFrequencyElements {
+    /**
+     * Time Complexity: O(n * logn)
+     * Space Complexity: O(n)
+     */
     public static int[] topKFrequentWithHashMap(int[] nums, int k) {
         int[] answer = new int[k];
         Map<Integer, Integer> map = new HashMap<>();
@@ -17,11 +21,10 @@ public class TopKFrequencyElements {
 
         int i = 0;
         for (Map.Entry<Integer, Integer> entry: entryList) {
+            answer[i++] = entry.getKey();
             if (i == k) {
                 return answer;
             }
-            answer[i] = entry.getKey();
-            i++;
         }
 
         return answer;
