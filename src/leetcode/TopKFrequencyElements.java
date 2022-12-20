@@ -30,6 +30,10 @@ public class TopKFrequencyElements {
         return answer;
     }
 
+    /**
+     * Time Complexity: O(n)
+     * Space Complexity: O(n)
+     */
     public static int[] topKFrequentWithBucketSort(int[] nums, int k) {
         Map<Integer, List<Integer>> bucket = new HashMap<>();
         Map<Integer, Integer> frequency = new HashMap<>();
