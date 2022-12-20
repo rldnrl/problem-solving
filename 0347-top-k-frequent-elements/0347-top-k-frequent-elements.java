@@ -17,7 +17,6 @@ class Solution {
             int num = freqEntry.getKey();
             int count = freqEntry.getValue();
             
-            bucket.computeIfAbsent(count, key -> new ArrayList<>());
             bucket.get(count).add(num);
         }
         
