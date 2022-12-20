@@ -46,11 +46,10 @@ public class TopKFrequencyElements {
             frequency.put(num, frequency.getOrDefault(num, 0) + 1);
         }
 
-        for (int num: nums) {
-            int count = frequency.get(num);
-            if (!bucket.get(count).contains(num)) {
-                bucket.get(count).add(num);
-            }
+        for (Map.Entry<Integer, Integer> entry: frequency.entrySet()) {
+            int num = entry.getKey();
+            int count = entry.getValue();
+            bucket.get(count).add(num);
         }
 
         int index = 0;
