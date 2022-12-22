@@ -57,15 +57,44 @@ public class ProductOfArrayExceptSelf {
         return answer;
     }
 
+    /**
+     * Time Complexity: O(n)
+     * Space Complexity: O(1)
+     */
+    public static int[] productExceptSelfWithPrefixPostfix2(int[] nums) {
+        int size = nums.length;
+        int[] answer = new int[size];
+
+        for (int i = 0; i < size; i++) {
+            answer[i] = 1;
+        }
+
+        int prefix = 1;
+        for (int i = 0; i < size; i++) {
+            answer[i] = prefix;
+            prefix = prefix * nums[i];
+        }
+
+        int postfix = 1;
+        for (int i = size - 1; i >= 0; i--) {
+            answer[i] = answer[i] * postfix;
+            postfix = postfix * nums[i];
+        }
+
+        return answer;
+    }
+
     public static void main(String[] args) {
         int[] nums1 = new int[]{1,2,3,4};
         int[] answer1 = new int[]{24,12,8,6};
         System.out.println(Arrays.equals(productExceptSelfWithBruteforce(nums1), answer1));
         System.out.println(Arrays.equals(productExceptSelfWithPrefixPostfix1(nums1), answer1));
+        System.out.println(Arrays.equals(productExceptSelfWithPrefixPostfix2(nums1), answer1));
 
         int[] nums2 = new int[]{-1,1,0,-3,3};
         int[] answer2 = new int[]{0,0,9,0,0};
         System.out.println(Arrays.equals(productExceptSelfWithBruteforce(nums2), answer2));
         System.out.println(Arrays.equals(productExceptSelfWithPrefixPostfix1(nums2), answer2));
+        System.out.println(Arrays.equals(productExceptSelfWithPrefixPostfix2(nums2), answer2));
     }
 }
