@@ -59,20 +59,15 @@ public class ProductOfArrayExceptSelf {
         int size = nums.length;
         int[] answer = new int[size];
 
-        for (int i = 0; i < size; i++) {
-            answer[i] = 1;
+        answer[0] = 1;
+        for (int i = 1; i < size; i++) {
+            answer[i] = answer[i - 1] * nums[i - 1];
         }
 
-        int prefix = 1;
-        for (int i = 0; i < size; i++) {
-            answer[i] = prefix;
-            prefix = prefix * nums[i];
-        }
-
-        int postfix = 1;
+        int right = 1;
         for (int i = size - 1; i >= 0; i--) {
-            answer[i] = answer[i] * postfix;
-            postfix = postfix * nums[i];
+            answer[i] = answer[i] * right;
+            right = right * nums[i];
         }
 
         return answer;
