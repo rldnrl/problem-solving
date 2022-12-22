@@ -29,29 +29,23 @@ public class ProductOfArrayExceptSelf {
      */
     public static int[] productExceptSelfWithPrefixPostfix1(int[] nums) {
         int size = nums.length;
-        int[] prefixArray = new int[size];
-        int[] postfixArray = new int[size];
+        int[] left = new int[size];
+        int[] right = new int[size];
 
 
-        prefixArray[0] = nums[0];
+        left[0] = 1;
         for (int i = 1; i < size; i++) {
-            prefixArray[i] = prefixArray[i - 1] * nums[i];
+            left[i] = left[i - 1] * nums[i - 1];
         }
 
-        postfixArray[size - 1] = nums[size - 1];
+        right[size - 1] = 1;
         for (int i = size - 2; i >= 0; i--) {
-            postfixArray[i] = postfixArray[i + 1] * nums[i];
+            right[i] = right[i + 1] * nums[i + 1];
         }
 
         int[] answer = new int[size];
-        for (int i = 0; i < size; i++) {
-            if (i == 0) {
-                answer[i] = postfixArray[i + 1];
-            } else if (i == size - 1) {
-                answer[i] = prefixArray[i - 1];
-            } else {
-                answer[i] = prefixArray[i - 1] * postfixArray[i + 1];
-            }
+        for (int i = 0; i < nums.length; i++) {
+            answer[i] = left[i] * right[i];
         }
 
         return answer;
