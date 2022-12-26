@@ -16,7 +16,7 @@ public class TopKFrequentWords {
         }
     }
 
-    public static List<String> topKFrequent(String[] words, int k) {
+    public static List<String> topKFrequentWithHashMap(String[] words, int k) {
         Map<String, Integer> freq = new HashMap<>();
 
         for (String word: words) {
@@ -42,9 +42,9 @@ public class TopKFrequentWords {
 
     public static void main(String[] args) {
         String[] words1 = new String[]{"i","love","leetcode","i","love","coding"};
-        System.out.println(topKFrequent(words1, 2));
+        System.out.println(topKFrequentWithHashMap(words1, 2));
 
         String[] words2 = new String[]{"the","day","is","sunny","the","the","the","sunny","is","is"};
-        System.out.println(topKFrequent(words2, 4));
+        System.out.println(topKFrequentWithHashMap(words2, 4));
     }
 }
