@@ -1,31 +1,29 @@
 class Solution {
-    public static class MyComparator implements Comparator<Map.Entry<String, Integer>> {
-        @Override
-        public int compare(Map.Entry<String, Integer> m1, Map.Entry<String, Integer> m2) {
-            if (m2.getValue() > m1.getValue()) {
-                return 1;
-            } else if (m2.getValue() < m1.getValue()) {
-                return -1;
-            } else {
-                return m1.getKey().compareToIgnoreCase(m2.getKey());
-            }
-        }
-    }
-    
     public List<String> topKFrequent(String[] words, int k) {
         Map<String, Integer> freq = new HashMap<>();
         for (String word: words) {
             freq.put(word, freq.getOrDefault(word, 0) + 1);
         }
         
-        List<Map.Entry<String, Integer>> freqEntryList = new ArrayList<>(freq.entrySet());
-        freqEntryList.sort(new MyComparator());
+        Map<Integer, List<String>> bucket = new HashMap<>();
+        for (int i = 0; i < words.length + 1; i++) {
+            bucket.computeIfAbsent(i, key -> new ArrayList<>());
+        }
+        
+        for (Map.Entry<String, Integer> freqEntry: freq.entrySet()) {
+            String word = freqEntry.getKey();
+            int count = freqEntry.getValue();
+            bucket.get(count).add(word);
+        }
         
         List<String> answer = new ArrayList<>();
-        for (Map.Entry<String, Integer> freqEntry: freqEntryList) {
-            answer.add(freqEntry.getKey());
-            if (answer.size() == k) {
-                return answer;
+        for (int i = words.length; i >= 0; i--) {
+            bucket.get(i).sort(null);
+            for (String word: bucket.get(i)) {
+                answer.add(word);
+                if (answer.size() == k) {
+                    return answer;
+                }
             }
         }
         
