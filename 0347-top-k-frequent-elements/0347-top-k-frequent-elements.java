@@ -5,16 +5,25 @@ class Solution {
             freq.put(num, freq.getOrDefault(num, 0) + 1);
         }
         
-        List<Map.Entry<Integer, Integer>> freqEntryList = new ArrayList<>(freq.entrySet());
+        Map<Integer, List<Integer>> bucket = new HashMap<>();
+        for (int i = 0; i < nums.length + 1; i++) {
+            bucket.computeIfAbsent(i, key -> new ArrayList<>());
+        }
         
-        freqEntryList.sort((a, b) -> b.getValue() - a.getValue());
+        for (Map.Entry<Integer, Integer> freqEntry: freq.entrySet()) {
+            int num = freqEntry.getKey();
+            int count = freqEntry.getValue();
+            bucket.get(count).add(num);
+        }
         
         int indexOfAnswer = 0;
         int[] answer = new int[k];
-        for (Map.Entry<Integer, Integer> freqEntry: freqEntryList) {
-            answer[indexOfAnswer++] = freqEntry.getKey();
-            if (indexOfAnswer == k) {
-                return answer;
+        for (int i = nums.length; i >= 0; i--) {
+            for (int num: bucket.get(i)) {
+                answer[indexOfAnswer++] = num;
+                if (indexOfAnswer == k) {
+                    return answer;
+                }
             }
         }
         
