@@ -1,6 +1,6 @@
 class Solution {
     public int maxSubArray(int[] nums) {
-        int maxSub = nums[0];
+        int answer = nums[0];
         int curSum = 0;
         
         for (int num: nums) {
@@ -8,9 +8,9 @@ class Solution {
                 curSum = 0;
             }
             curSum += num;
-            maxSub = Math.max(maxSub, curSum);
+            answer = Math.max(curSum, answer);
         }
         
-        return maxSub;
+        return answer;
     }
 }
