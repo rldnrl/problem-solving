@@ -3,14 +3,14 @@ class Solution {
         int answer = 0;
         Set<Integer> set = new HashSet<>();
         
-        for (int i = 0; i < nums.length; i++) {
-            set.add(nums[i]);
+        for (int num: nums) {
+            set.add(num);
         }
         
-        for (int i = 0; i < nums.length; i++) {
-            if (!set.contains(nums[i] - 1)) {
+        for (int num: nums) {
+            if (!set.contains(num - 1)) {
                 int length = 0;
-                while (set.contains(nums[i] + length)) {
+                while (set.contains(num + length)) {
                     length++;
                 }
                 answer = Math.max(answer, length);
