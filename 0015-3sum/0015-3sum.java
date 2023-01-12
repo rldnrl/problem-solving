@@ -4,7 +4,7 @@ class Solution {
         Arrays.sort(nums);
 
         for (int i = 0; i < nums.length - 2; i++) {
-            if (i > 0 && nums[i - 1] == nums[i]) {
+            if (i > 0 && nums[i] == nums[i - 1]) {
                 continue;
             }
 
@@ -24,7 +24,7 @@ class Solution {
                     list.add(nums[right]);
                     answer.add(list);
                     left++;
-                    while (nums[left - 1] == nums[left] && left < right) {
+                    while (nums[left] == nums[left - 1] && left < right) {
                         left++;
                     }
                 }
