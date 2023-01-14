@@ -1,9 +1,12 @@
 package leetcode;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class LongestSubstringWithoutRepeatingCharacters {
+    /**
+     * Time Complexity: O(n^3)
+     * Space Complexity: O(min(n, m))
+     */
     public static int lengthOfLongestSubstringWithBruteforce(String s) {
         int answer = 0;
 
@@ -30,5 +33,32 @@ public class LongestSubstringWithoutRepeatingCharacters {
         }
 
         return true;
+    }
+
+    public static int lengthOfLongestSubstringWithBruteforceWithSlidingWindow(String s) {
+        int answer = 0;
+
+        Map<Character, Integer> map = new HashMap<>();
+        int left = 0;
+        int right = 0;
+        while (right < s.length()) {
+            char r = s.charAt(right);
+            map.put(r, map.getOrDefault(r, 0) + 1);
+            while (map.get(r) > 1) {
+                char l = s.charAt(left);
+                map.put(l, map.get(l) - 1);
+                left++;
+            }
+            answer = Math.max(answer, right - left + 1);
+            right++;
+        }
+
+        return answer;
+    }
+
+    public static void main(String[] args) {
+        String s1 = "abcabcbb";
+        System.out.println(lengthOfLongestSubstringWithBruteforce(s1));
+        System.out.println(lengthOfLongestSubstringWithBruteforceWithSlidingWindow(s1));
     }
 }
