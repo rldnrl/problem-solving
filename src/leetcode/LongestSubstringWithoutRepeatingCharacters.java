@@ -56,9 +56,26 @@ public class LongestSubstringWithoutRepeatingCharacters {
         return answer;
     }
 
+    public static int lengthOfLongestSubstringWithBruteforceWithSlidingWindowOptimization(String s) {
+        int answer = 0;
+
+        Map<Character, Integer> map = new HashMap<>();
+        int left = 0;
+        for (int right = 0; right < s.length(); right++) {
+            if (map.containsKey(s.charAt(right))) {
+                left = Math.max(left, map.get(s.charAt(right)));
+            }
+            answer = Math.max(answer, right - left + 1);
+            map.put(s.charAt(right), right + 1);
+        }
+
+        return answer;
+    }
+
     public static void main(String[] args) {
         String s1 = "abcabcbb";
         System.out.println(lengthOfLongestSubstringWithBruteforce(s1));
         System.out.println(lengthOfLongestSubstringWithBruteforceWithSlidingWindow(s1));
+        System.out.println(lengthOfLongestSubstringWithBruteforceWithSlidingWindowOptimization(s1));
     }
 }
