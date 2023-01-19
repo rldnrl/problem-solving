@@ -54,6 +54,19 @@
     // 2. Map.Entry에 내장 함수를 사용하는 방법
     entryList.sort(Map.Entry.comparingByValue().reversed()); // {3=8, 1=2, 2=1}
     ```
+- `Map`의 value 중 최대, 최소값 뽑기
+  - `Collections를` 이용한다.
+  ```java
+  Map<Character, Integer> count = new HashMap<>();
+  
+  String str1 = "apple";
+  for (char c: str1.toCharArray()) {
+    count.put(c, count.getOrDefault(c, 0) + 1);
+  }
+  
+  int maxValueInCount = Collections.max(count.values()); // 2
+  int minValueInCount = Collections.min(count.values()); // 1
+  ```
 
 ### Character
 - `isWhiteSpace(char c)`: `c`가 공백이면 `true`, 그렇지 않으면 `false`
