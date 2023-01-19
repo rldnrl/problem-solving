@@ -55,7 +55,7 @@
     entryList.sort(Map.Entry.comparingByValue().reversed()); // {3=8, 1=2, 2=1}
     ```
 - `Map`의 value 중 최대, 최소값 뽑기
-  - `Collections를` 이용한다.
+  - `Collections`를 이용한다.
   ```java
   Map<Character, Integer> count = new HashMap<>();
   
