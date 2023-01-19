@@ -5,12 +5,11 @@
 var longestConsecutive = function(nums) {
     if (nums.length === 0) return 0;
     
-    let answer = 0;
-    
     nums.sort((a, b) => a - b);
     
-    const numsSet = new Set(nums);
-    const uniqueNums = [...numsSet]
+    let answer = 0;
+    const set = new Set(nums);
+    const uniqueNums = [...set];
     
     let length = 0;
     for (let i = 1; i < uniqueNums.length; i++) {
