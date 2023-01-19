@@ -3,14 +3,16 @@ class Solution {
         int answer = 0;
         int left = 0;
         
-        Map<Character, Integer> freq = new HashMap<>();
+        Map<Character, Integer> count = new HashMap<>();
         for (int right = 0; right < s.length(); right++) {
-            char c = s.charAt(right);
-            freq.put(c, freq.getOrDefault(c, 0) + 1);
+            char r = s.charAt(right);
+            count.put(r, count.getOrDefault(r, 0) + 1);
             
-            int maxValue = Collections.max(freq.values());
-            while (right - left + 1 - maxValue > k) {
-                freq.put(s.charAt(left), freq.get(s.charAt(left)) - 1);
+            int maxCount = Collections.max(count.values());
+            while (right - left + 1 - maxCount > k) {
+                char l = s.charAt(left);
+                int countOfL = count.get(l);
+                count.put(l, countOfL - 1);
                 left++;
             }
             
