@@ -3,12 +3,15 @@ class Solution {
         int answer = 0;
         int minPrice = Integer.MAX_VALUE;
         
-        for (int i = 0; i < prices.length; i++) {
-            if (prices[i] < minPrice) {
-                minPrice = prices[i];
-            } else if (prices[i] - minPrice > answer) {
-                answer = prices[i] - minPrice;
+        int right = 0;
+        while (right < prices.length) {
+            if (prices[right] < minPrice) {
+                minPrice = prices[right];
+            } else if (prices[right] - minPrice > answer) {
+                answer = Math.max(answer, prices[right] - minPrice);
             }
+            
+            right++;
         }
         
         return answer;
