@@ -33,7 +33,6 @@ public class LongestConsecutive {
             return 0;
         }
 
-        int answer = 0;
         Arrays.sort(nums);
 
         Set<Integer> set = new HashSet<>();
@@ -45,6 +44,7 @@ public class LongestConsecutive {
             }
         }
 
+        int answer = 0;
         int length = 0;
         for (int i = 1; i < uniqueNums.size(); i++) {
             if (uniqueNums.get(i) - uniqueNums.get(i - 1) == 1) {
@@ -59,13 +59,12 @@ public class LongestConsecutive {
     }
 
     public static int longestConsecutiveWithHashSetOptimization(int[] nums) {
-        int answer = 0;
-
         Set<Integer> set = new HashSet<>();
         for (int num: nums) {
             set.add(num);
         }
 
+        int answer = 0;
         for (int num: nums) {
             if (!set.contains(num - 1)) {
                 int curNum = num;
