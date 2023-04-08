@@ -15,10 +15,6 @@ class Solution {
             hashMap.get(sortedStr).add(str);
         }
         
-        for (Map.Entry<String, List<String>> entry: hashMap.entrySet()) {
-            result.add(entry.getValue());
-        }
-        
-        return result;
+        return new LinkedList<>(hashMap.values());
     }
 }
