@@ -1,20 +1,24 @@
 class Solution {
+    static String sorted(String str) {
+        String[] newStringParts = str.split("");
+        Arrays.sort(newStringParts);
+        return String.join("", newStringParts);
+    }
+    
     public List<List<String>> groupAnagrams(String[] strs) {
-        Map<String, List<String>> map = new HashMap<>();
+        List<List<String>> result = new LinkedList<>();
+        Map<String, List<String>> hashMap = new HashMap<>();
         
         for (String str: strs) {
-            char[] count = new char[26];
-            for (char c: str.toCharArray()) {
-                count[c - 'a']++;
-            }
-            String key = String.valueOf(count);
-            map.computeIfAbsent(key, k -> new ArrayList<>());
-            map.get(key).add(str);
+            String sortedStr = sorted(str);
+            hashMap.computeIfAbsent(sortedStr, (k) -> new LinkedList());
+            hashMap.get(sortedStr).add(str);
         }
         
-        List<List<String>> answer = new ArrayList<>();
-        answer.addAll(map.values());
+        for (Map.Entry<String, List<String>> entry: hashMap.entrySet()) {
+            result.add(entry.getValue());
+        }
         
-        return answer;
+        return result;
     }
 }
