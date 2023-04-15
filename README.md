@@ -80,7 +80,7 @@
 - 두 배열이 같은지 확인하기
   - `Arrays.equals()`를 이용하면 된다.
 
-### Pair 객체 만들기
+### `Pair` 객체 만들기
 
 ```java
 class Pair<L, R> {
@@ -100,4 +100,17 @@ class Pair<L, R> {
                 '}';
     }
 }
+```
+
+### `List<Pair<Integer, Integer>>` 정렬하기
+1. 오름차순 정렬(`left`를 기준으로 오름차순 정렬한다. `left`가 같은 경우 `right`를 기준으로 오름차순으로 정렬한다.)
+
+```java
+pairs.sort((o1, o2) -> (!Objects.equals(o1.left, o2.left) ? o1.left - o2.left : o1.right.compareTo(o2.right)));
+```
+
+2. 내림차순 정렬(`left`를 기준으로 내림차순 정렬한다. `left`가 같은 경우 `right`를 기준으로 내림차순 정렬한다.)
+
+```java
+pairs.sort((o1, o2) -> (!Objects.equals(o1.left, o2.left) ? o2.left - o1.left : o2.right.compareTo(o1.right)));
 ```
