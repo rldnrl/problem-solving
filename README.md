@@ -79,3 +79,25 @@
     - 같은 값을 `Objects.equals()`를 사용할 경우 `true`를 반환.
 - 두 배열이 같은지 확인하기
   - `Arrays.equals()`를 이용하면 된다.
+
+### Pair 객체 만들기
+
+```java
+class Pair<L, R> {
+    L left;
+    R right;
+    
+    Pair(L left, R right) {
+        this.left = left;
+        this.right = right;
+    }
+
+    @Override
+    public String toString() {
+        return "Pair{" +
+                "left=" + left +
+                ", right=" + right +
+                '}';
+    }
+}
+```
