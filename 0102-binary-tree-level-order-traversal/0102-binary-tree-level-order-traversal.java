@@ -21,27 +21,28 @@ class Solution {
             return result;
         }
         
-        Deque<TreeNode> q = new ArrayDeque<>();
+        Queue<TreeNode> q = new ArrayDeque<>();
         Collections.addAll(q, root);
         
-        while (!q.isEmpty()) {
+        while(!q.isEmpty()) {
             int size = q.size();
             List<Integer> level = new ArrayList<>();
+            
             for (int i = 0; i < size; i++) {
-                TreeNode node = q.pollFirst();
-                level.add(node.val);
+                TreeNode current = q.poll();
+                level.add(current.val);
                 
-                if (node.left != null) {
-                    q.add(node.left);    
+                if (current.left != null) {
+                    q.add(current.left);
                 }
                 
-                if (node.right != null) {
-                    q.add(node.right);    
-                } 
+                if (current.right != null) {
+                    q.add(current.right);
+                }
             }
             
             if (!level.isEmpty()) {
-                result.add(level);    
+                result.add(level);
             }
         }
         
