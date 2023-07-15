@@ -4,21 +4,13 @@
  * @return {number[]}
  */
 var twoSum = function(nums, target) {
-    const result = []
-    const map = new Map()
-    
-    nums.forEach((num, index) => {
-        map.set(num, index)
-    })
+    const map = new Map();
     
     for (let i = 0; i < nums.length; i++) {
-        const element = nums[i]
-        result.push(i)
-        if (map.has(target - element) && map.get(target - element) !== i) {
-            result.push(map.get(target - element))
-            return result
-        } else {
-            result.pop()
+        if (map.has(target - nums[i])) {
+            return [i, map.get(target - nums[i])]
         }
+        
+        map.set(nums[i], i)
     }
 };
