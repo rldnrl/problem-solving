@@ -3,14 +3,21 @@
  * @return {string[][]}
  */
 var groupAnagrams = function(strs) {
-    const hashMap = new Map();
-
+    const map = new Map()
+    
     for (const str of strs) {
-      const sortedStr = str.split("").sort().join("");
-      const arrayInHashMap = hashMap.get(sortedStr) || [];
-      arrayInHashMap.push(str);
-      hashMap.set(sortedStr, arrayInHashMap)
+        const charCount = Array(26).fill(0)
+        for (const c of str) {
+            charCount[c.charCodeAt() - 'a'.charCodeAt()]++
+        }
+        const key = charCount.join(',')
+        
+        if (!map.has(key)) {
+            map.set(key, [])
+        }
+        
+        map.get(key).push(str)
     }
-
-    return [...hashMap.values()];
+    
+    return [...map.values()]
 };
