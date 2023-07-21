@@ -1,14 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="c75c4b4d-4001-4d48-8c7d-13fe713c4a45" name="변경" comment="" />
+    <list default="true" id="c75c4b4d-4001-4d48-8c7d-13fe713c4a45" name="변경" comment="feat: solve car fleet">
+      <change afterPath="$PROJECT_DIR$/src/leetcode/OnlineStockSpan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-coding-interview.iml" beforeDir="false" afterPath="$PROJECT_DIR$/java-coding-interview.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/datastructure/TheMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/datastructure/TheMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/leetcode/GroupAnagram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leetcode/GroupAnagrams.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/README.md" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2GU4z5cbfYIuBoL1GNzsygPX4T8" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -16,13 +43,98 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/rldnrl/Desktop/github-repo/java/java-coding-interview&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;모듈&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager" selected="Application.CarFleet">
+    <configuration name="CarFleet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="leetcode.CarFleet" />
+      <module name="java-coding-interview" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="leetcode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LongestConsecutive" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="leetcode.LongestConsecutive" />
+      <module name="java-coding-interview" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="leetcode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LongestSubstringWithoutRepeatingCharacters" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="leetcode.LongestSubstringWithoutRepeatingCharacters" />
+      <module name="java-coding-interview" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="leetcode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TheMap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="datastructure.TheMap" />
+      <module name="java-coding-interview" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="datastructure.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ThreeSum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="leetcode.ThreeSum" />
+      <module name="java-coding-interview" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="leetcode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="디폴트 작업">
@@ -31,7 +143,444 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1666430087754</updated>
+      <workItem from="1669206921642" duration="8932000" />
+      <workItem from="1669379428233" duration="12106000" />
+      <workItem from="1669543506453" duration="6620000" />
+      <workItem from="1669636134320" duration="9767000" />
+      <workItem from="1670063319111" duration="670000" />
+      <workItem from="1670129896906" duration="839000" />
+      <workItem from="1670131294828" duration="3128000" />
+      <workItem from="1670151160264" duration="4680000" />
+      <workItem from="1670238401843" duration="45130000" />
+      <workItem from="1670928438221" duration="19558000" />
+      <workItem from="1671285621505" duration="27000" />
+      <workItem from="1671286163928" duration="857000" />
+      <workItem from="1671368377433" duration="1098000" />
+      <workItem from="1671370187122" duration="7639000" />
+      <workItem from="1671438715853" duration="25000" />
+      <workItem from="1671440533478" duration="172000" />
+      <workItem from="1671452452422" duration="4645000" />
+      <workItem from="1671537554076" duration="5290000" />
+      <workItem from="1671623835845" duration="9218000" />
+      <workItem from="1671877391012" duration="8715000" />
+      <workItem from="1672116618100" duration="2273000" />
+      <workItem from="1672224547118" duration="5124000" />
+      <workItem from="1672290224495" duration="2355000" />
+      <workItem from="1672576356887" duration="10000" />
+      <workItem from="1672666313825" duration="12018000" />
+      <workItem from="1673525260891" duration="17276000" />
+      <workItem from="1674200317869" duration="10347000" />
+      <workItem from="1674551817418" duration="7146000" />
+      <workItem from="1675594533947" duration="857000" />
+      <workItem from="1676188739020" duration="205000" />
+      <workItem from="1681136099632" duration="751000" />
+      <workItem from="1681301457612" duration="65000" />
+      <workItem from="1681301729321" duration="14000" />
+      <workItem from="1681301748797" duration="123000" />
+      <workItem from="1681302273774" duration="40000" />
+      <workItem from="1681302859048" duration="18000" />
+      <workItem from="1681556738259" duration="2650000" />
+      <workItem from="1681559397791" duration="3111000" />
+      <workItem from="1681730530080" duration="2000" />
+      <workItem from="1681733487308" duration="3121000" />
+      <workItem from="1683522300409" duration="1355000" />
+      <workItem from="1689426976077" duration="56000" />
+      <workItem from="1689427039453" duration="1558000" />
+      <workItem from="1689938936384" duration="7004000" />
     </task>
+    <task id="LOCAL-00052" summary="feat: 없는 숫자 더하기 구현">
+      <created>1670759809297</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1670759809297</updated>
+    </task>
+    <task id="LOCAL-00053" summary="feat: 명예의 전당1">
+      <created>1670849680809</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1670849680809</updated>
+    </task>
+    <task id="LOCAL-00054" summary="feat: 기사단원의 무기">
+      <created>1670850563658</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1670850563658</updated>
+    </task>
+    <task id="LOCAL-00055" summary="feat: 기사단원의 무기 최적화">
+      <created>1670852655317</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1670852655317</updated>
+    </task>
+    <task id="LOCAL-00056" summary="feat: remove unused libraries">
+      <created>1670852742239</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1670852742239</updated>
+    </task>
+    <task id="LOCAL-00057" summary="feat: merge sorted array with two pointer">
+      <created>1670935580405</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1670935580406</updated>
+    </task>
+    <task id="LOCAL-00058" summary="feat: write tip to sort by values in hashmap">
+      <created>1671018957315</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1671018957315</updated>
+    </task>
+    <task id="LOCAL-00059" summary="feat: add code block">
+      <created>1671019036045</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1671019036045</updated>
+    </task>
+    <task id="LOCAL-00060" summary="feat: implement top k frequent elements with sort">
+      <created>1671426079877</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1671426079877</updated>
+    </task>
+    <task id="LOCAL-00061" summary="feat: implement top k frequent elements with bucket sort">
+      <created>1671426096676</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1671426096676</updated>
+    </task>
+    <task id="LOCAL-00062" summary="refactor: early return answer">
+      <created>1671437918829</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1671437918829</updated>
+    </task>
+    <task id="LOCAL-00063" summary="refactor: early return answer">
+      <created>1671437966819</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1671437966820</updated>
+    </task>
+    <task id="LOCAL-00064" summary="feat: add time complexity and space complexity">
+      <created>1671500265372</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1671500265372</updated>
+    </task>
+    <task id="LOCAL-00065" summary="feat: add time complexity and space complexity">
+      <created>1671500322616</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1671500322616</updated>
+    </task>
+    <task id="LOCAL-00066" summary="refactor: refactor using Map.Entry">
+      <created>1671501618439</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1671501618439</updated>
+    </task>
+    <task id="LOCAL-00067" summary="feat: implement top k frequent elements using heap">
+      <created>1671538132581</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1671538132581</updated>
+    </task>
+    <task id="LOCAL-00068" summary="feat: implement product of array except self with brute force">
+      <created>1671695231701</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1671695231701</updated>
+    </task>
+    <task id="LOCAL-00069" summary="feat: implement product of array except self with prefix and postfix">
+      <created>1671695257222</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1671695257222</updated>
+    </task>
+    <task id="LOCAL-00070" summary="feat: implement product of array except self with prefix and postfix optimization">
+      <created>1671695502721</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1671695502721</updated>
+    </task>
+    <task id="LOCAL-00071" summary="refactor: rename variable">
+      <created>1671700379874</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1671700379874</updated>
+    </task>
+    <task id="LOCAL-00072" summary="refactor: rename solution name">
+      <created>1671700464881</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1671700464881</updated>
+    </task>
+    <task id="LOCAL-00073" summary="refactor: rename variable name">
+      <created>1671701815974</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1671701815974</updated>
+    </task>
+    <task id="LOCAL-00074" summary="refactor: rename variable name">
+      <created>1671702099198</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1671702099198</updated>
+    </task>
+    <task id="LOCAL-00075" summary="feat: implement encode and decode strings">
+      <created>1671971083176</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1671971083177</updated>
+    </task>
+    <task id="LOCAL-00076" summary="feat: implement top k frequent words">
+      <created>1672045950209</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1672045950209</updated>
+    </task>
+    <task id="LOCAL-00077" summary="feat: change method name">
+      <created>1672046366101</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1672046366101</updated>
+    </task>
+    <task id="LOCAL-00078" summary="feat: implement top k frequent words with bucket sort">
+      <created>1672116708463</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1672116708463</updated>
+    </task>
+    <task id="LOCAL-00079" summary="feat: implement top k frequent words with bucket sort">
+      <created>1672116792729</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1672116792729</updated>
+    </task>
+    <task id="LOCAL-00080" summary="feat: implement three sum">
+      <created>1672290289186</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1672290289186</updated>
+    </task>
+    <task id="LOCAL-00081" summary="feat: implement container with most water with bruteforce">
+      <created>1672746131781</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1672746131782</updated>
+    </task>
+    <task id="LOCAL-00082" summary="feat: implement container with most water with optimization">
+      <created>1672746201594</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1672746201595</updated>
+    </task>
+    <task id="LOCAL-00083" summary="feat: implement best time to buy and sell stock">
+      <created>1673351455160</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1673351455160</updated>
+    </task>
+    <task id="LOCAL-00084" summary="feat: implement the longest substring without repeating character">
+      <created>1673668912973</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1673668912974</updated>
+    </task>
+    <task id="LOCAL-00085" summary="feat: implement the longest substring without repeating character">
+      <created>1673669045026</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1673669045026</updated>
+    </task>
+    <task id="LOCAL-00086" summary="feat: implement the longest substring without repeating character with sliding window">
+      <created>1673674275907</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1673674275907</updated>
+    </task>
+    <task id="LOCAL-00087" summary="feat: implement the longest substring without repeating character with sliding window">
+      <created>1673674346296</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1673674346296</updated>
+    </task>
+    <task id="LOCAL-00088" summary="feat: implement the longest substring without repeating character with sliding window optimization">
+      <created>1673674862894</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1673674862894</updated>
+    </task>
+    <task id="LOCAL-00089" summary="feat: implement the longest substring without repeating character with sliding window2">
+      <created>1673877066967</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1673877066967</updated>
+    </task>
+    <task id="LOCAL-00090" summary="feat: implement the longest consecutive">
+      <created>1674116599513</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1674116599513</updated>
+    </task>
+    <task id="LOCAL-00091" summary="feat: summary of how to pick the largest value among the values of the map">
+      <created>1674117195822</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1674117195822</updated>
+    </task>
+    <task id="LOCAL-00092" summary="chore: remove code block">
+      <created>1674117274609</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1674117274609</updated>
+    </task>
+    <task id="LOCAL-00093" summary="feat: implement minimum window substring">
+      <created>1675261636001</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1675261636001</updated>
+    </task>
+    <task id="LOCAL-00094" summary="chore: change answer location">
+      <created>1675594597306</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1675594597306</updated>
+    </task>
+    <task id="LOCAL-00095" summary="feat: implement FindMinimumInRotatedSortedArray">
+      <created>1676188786430</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1676188786430</updated>
+    </task>
+    <task id="LOCAL-00096" summary="feat: implement FindMinimumInRotatedSortedArray">
+      <created>1676188937192</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1676188937192</updated>
+    </task>
+    <task id="LOCAL-00097" summary="feat: implement IsIsomorphic">
+      <created>1681301502227</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1681301502227</updated>
+    </task>
+    <task id="LOCAL-00098" summary="feat: pair 객체 만들기">
+      <created>1681559064190</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1681559064191</updated>
+    </task>
+    <task id="LOCAL-00099" summary="feat: List&lt;Pair&gt; 정렬하기">
+      <created>1681559305796</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1681559305796</updated>
+    </task>
+    <task id="LOCAL-00100" summary="feat: solve car fleet">
+      <created>1683522416020</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1683522416020</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="refactor: rename variable" />
+    <MESSAGE value="refactor: rename solution name" />
+    <MESSAGE value="refactor: rename variable name" />
+    <MESSAGE value="feat: implement encode and decode strings" />
+    <MESSAGE value="feat: implement top k frequent words" />
+    <MESSAGE value="feat: change method name" />
+    <MESSAGE value="feat: implement top k frequent words with bucket sort" />
+    <MESSAGE value="feat: implement three sum" />
+    <MESSAGE value="feat: implement container with most water with bruteforce" />
+    <MESSAGE value="feat: implement container with most water with optimization" />
+    <MESSAGE value="feat: implement best time to buy and sell stock" />
+    <MESSAGE value="feat: implement the longest substring without repeating character" />
+    <MESSAGE value="feat: implement the longest substring without repeating character with sliding window" />
+    <MESSAGE value="feat: implement the longest substring without repeating character with sliding window optimization" />
+    <MESSAGE value="feat: implement the longest substring without repeating character with sliding window2" />
+    <MESSAGE value="feat: implement the longest consecutive" />
+    <MESSAGE value="feat: summary of how to pick the largest value among the values of the map" />
+    <MESSAGE value="chore: remove code block" />
+    <MESSAGE value="feat: implement minimum window substring" />
+    <MESSAGE value="chore: change answer location" />
+    <MESSAGE value="feat: implement FindMinimumInRotatedSortedArray" />
+    <MESSAGE value="feat: implement IsIsomorphic" />
+    <MESSAGE value="feat: pair 객체 만들기" />
+    <MESSAGE value="feat: List&lt;Pair&gt; 정렬하기" />
+    <MESSAGE value="feat: solve car fleet" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: solve car fleet" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="java.util.HashMap$Node" memberName="key" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

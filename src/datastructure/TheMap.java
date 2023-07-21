@@ -16,7 +16,7 @@ public class TheMap {
         System.out.println(map.size()); // 3
         System.out.println(map.get(1)); // Alex
         System.out.println(map.containsKey(4)); // false
-        System.out.println(map.keySet());
+        System.out.println(map.keySet()); // [1=Person[name=Alex], 2=Person[name=Siri], 3=Person[name=Mariam]]
         System.out.println(map.entrySet());
         System.out.println(map.values());
         map.remove(3);

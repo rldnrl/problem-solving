@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.java;
 
 public class StringCompression {
     public static int compress(char[] chars) {

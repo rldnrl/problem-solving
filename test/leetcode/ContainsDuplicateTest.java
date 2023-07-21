@@ -1,5 +1,6 @@
 package leetcode;
 
+import leetcode.java.ContainsDuplicate;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
 

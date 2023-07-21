@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.java;
 
 public class FindMinimumInRotatedSortedArray {
     /**

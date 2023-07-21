@@ -1,5 +1,6 @@
 package leetcode;
 
+import leetcode.java.ValidAnagram;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

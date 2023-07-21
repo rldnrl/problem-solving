@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.java;
 
 /**
  * <a href="https://leetcode.com/problems/maximum-subarray/">Maximum Subarray</a>

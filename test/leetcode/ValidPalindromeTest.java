@@ -3,7 +3,7 @@ package leetcode;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 
-import static leetcode.ValidPalindrome.*;
+import static leetcode.java.ValidPalindrome.*;
 
 public class ValidPalindromeTest {
     @Test

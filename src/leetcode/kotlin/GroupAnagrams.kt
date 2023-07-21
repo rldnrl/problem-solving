@@ -1,4 +1,4 @@
-package leetcode
+package leetcode.kotlin
 
 class GroupAnagrams {
     fun solutionWithSorting(strs: Array<String>): List<List<String>> {
