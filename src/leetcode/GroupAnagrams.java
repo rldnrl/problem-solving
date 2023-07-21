@@ -2,7 +2,7 @@ package leetcode;
 
 import java.util.*;
 
-public class GroupAnagram {
+public class GroupAnagrams {
     public static String sortString(String s) {
         String[] arrayOfS = s.split("");
         Arrays.sort(arrayOfS);
