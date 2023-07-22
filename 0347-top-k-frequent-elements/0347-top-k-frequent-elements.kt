@@ -1,33 +1,22 @@
 class Solution {
     fun topKFrequent(nums: IntArray, k: Int): IntArray {
-        val answer = IntArray(k);
-        val bucket: MutableMap<Int, MutableList<Int>> = mutableMapOf()
-        val freq: MutableMap<Int, Int> = mutableMapOf()
-
-        for (i in 0..nums.size) {
-            bucket.putIfAbsent(i, mutableListOf())
-        }
-
+        val result = IntArray(k)
+        val map = mutableMapOf<Int, Int>()
+        
         for (num in nums) {
-            freq[num] = freq.getOrDefault(num, 0) + 1
+            map[num] = map.getOrDefault(num, 0) + 1
         }
-
-        for (entries in freq.entries) {
-            val num = entries.key
-            val count = entries.value
-            bucket[count]?.add(num)
-        }
-
+        
+        val sortedEntries = map.entries.toList().sortedBy { -it.value }
+        
         var i = 0
-        for (num in nums.size downTo 0) {
-            for (element in bucket[num]!!) {
-                answer[i++] = element
-                if (i == k) {
-                    return answer
-                }
+        for (entry in sortedEntries) {
+            result[i++] = entry.key
+            if (i == k) {
+                return result
             }
         }
-
-        return answer
+        
+        return result
     }
 }
