@@ -1,7 +1,5 @@
 package leetcode.kotlin
 
-import java.util.LinkedList
-
 class TopKFrequent {
     fun solutionWithSort(nums: IntArray, k: Int): IntArray {
         val result = IntArray(k)
