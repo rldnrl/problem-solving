@@ -4,31 +4,37 @@
  * @return {number[]}
  */
 var topKFrequent = function(nums, k) {
-    const SIZE = nums.length;
-    const frequency = new Map();
-    const bucket = new Map();
+    const answer = Array(k).fill(0)
+    const bucket = new Map()
+    const freq = new Map()
+    
+    for (let i = 0; i < nums.length + 1; i++) {
+        bucket.set(i, [])
+    }
     
     for (const num of nums) {
-        const count = frequency.get(num) || 0;
-        frequency.set(num, count + 1);
+        const count = freq.get(num) ?? 0
+        freq.set(num, count + 1)
     }
     
-    for (let i = 0; i < SIZE + 1; i++) {
-        bucket.set(i, []);
+    for (const entry of freq.entries()) {
+        const element = entry[0]
+        const count = entry[1]
+        bucket.get(count).push(element)
     }
     
-    for (const [num, count] of frequency.entries()) {
-        bucket.get(count).push(num);
-    }
-    
-    let index = 0;
-    const answer = [];
-    for (let i = SIZE; i >= 0; i--) {
-        for (const num of bucket.get(i)) {
-            answer[index++] = num;
-            if (index === k) {
+    let i = 0;
+    for (let count = nums.length + 1; count >= 0; count--) {
+        if (!bucket.get(count)) {
+            continue
+        }
+        for (const element of bucket.get(count)) {
+            answer[i++] = element
+            if (i == k) {
                 return answer;
             }
         }
     }
+    
+    return answer;
 };
