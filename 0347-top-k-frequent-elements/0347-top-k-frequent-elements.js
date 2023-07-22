@@ -24,10 +24,7 @@ var topKFrequent = function(nums, k) {
     }
     
     let i = 0;
-    for (let count = nums.length + 1; count >= 0; count--) {
-        if (!bucket.get(count)) {
-            continue
-        }
+    for (let count = nums.length; count >= 0; count--) {
         for (const element of bucket.get(count)) {
             answer[i++] = element
             if (i == k) {
