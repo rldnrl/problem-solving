@@ -1,6 +1,6 @@
 class Solution {
     fun productExceptSelf(nums: IntArray): IntArray {
-                val leftArray = IntArray(nums.size)
+        val leftArray = IntArray(nums.size)
         leftArray[0] = 1
         for (i in 1..nums.size - 1) {
             leftArray[i] = leftArray[i - 1] * nums[i - 1]
