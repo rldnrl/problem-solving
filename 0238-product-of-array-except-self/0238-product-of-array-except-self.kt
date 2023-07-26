@@ -5,7 +5,7 @@ class Solution {
         for (i in 1..nums.size - 1) {
             leftArray[i] = leftArray[i - 1] * nums[i - 1]
         }
-
+        
         val rightArray = IntArray(nums.size)
         rightArray[nums.size - 1] = 1
         for (i in nums.size - 2 downTo 0) {
