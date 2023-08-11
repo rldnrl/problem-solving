@@ -6,6 +6,7 @@ class Solution {
 
         var left = 0
         var right = nums.size - 1
+        val n = nums.size - 1
 
         if (nums[left] < nums[right]) {
             return nums[0]
@@ -13,7 +14,7 @@ class Solution {
 
         while (right >= left) {
             var mid = left + (right - left) / 2
-
+            
             if (nums[mid] > nums[mid + 1]) {
                 return nums[mid + 1]
             }
@@ -22,7 +23,7 @@ class Solution {
                 return nums[mid]
             }
 
-            if (nums[mid] > nums[0]) {
+            if (nums[mid] > nums[n]) {
                 left = mid + 1
             } else {
                 right = mid - 1
