@@ -14,7 +14,7 @@ class FindMinimumInRotatedSortedArray {
         }
 
         while (right >= left) {
-            var mid = left + (right - left) / 2
+            val mid = left + (right - left) / 2
 
             if (nums[mid] > nums[mid + 1]) {
                 return nums[mid + 1]
