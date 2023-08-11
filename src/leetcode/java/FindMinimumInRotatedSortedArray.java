@@ -2,7 +2,7 @@ package leetcode.java;
 
 public class FindMinimumInRotatedSortedArray {
     /**
-     * Time Complexity: O(n)
+     * Time Complexity: O(logn)
      * Space Complexity: O(1)
      */
     public int findMin(int[] nums) {
