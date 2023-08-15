@@ -65,6 +65,10 @@ class LongestConsecutive {
      * Space complexity: O(n)
      */
     fun solution3(nums: IntArray): Int {
+        if (nums.isEmpty()) {
+            return 0
+        }
+
         val setNums = mutableSetOf<Int>()
 
         for (num in nums) {
