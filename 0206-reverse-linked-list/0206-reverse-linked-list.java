@@ -13,10 +13,10 @@ class Solution {
         ListNode prev = null;
         ListNode curr = head;
         while (curr != null) {
-            ListNode nextTemp = curr.next;
+            ListNode nextNode = curr.next;
             curr.next = prev;
             prev = curr;
-            curr = nextTemp;
+            curr = nextNode;
         }
         
         return prev;
