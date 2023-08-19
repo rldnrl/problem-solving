@@ -9,16 +9,14 @@
  */
 class Solution {
     fun reverseList(head: ListNode?): ListNode? {
-        var prevNode: ListNode? = null
-        var currNode: ListNode? = head
-        
-        while (currNode != null) {
-            val nextNode = currNode.next
-            currNode.next = prevNode
-            prevNode = currNode
-            currNode = nextNode
+        if (head == null || head.next == null) {
+            return head
         }
         
-        return prevNode
+        val reversedSublist = reverseList(head.next)
+        head.next.next = head
+        head.next = null
+        
+        return reversedSublist
     }
 }
