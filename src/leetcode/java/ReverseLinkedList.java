@@ -9,7 +9,7 @@ public class ReverseLinkedList {
         ListNode(int val, ListNode next) { this.val = val; this.next = next; }
     }
 
-    public ListNode reverseList(ListNode head) {
+    public ListNode reverseListWithIterative(ListNode head) {
         ListNode prevNode = null;
         ListNode currNode = head;
 
@@ -21,5 +21,17 @@ public class ReverseLinkedList {
         }
 
         return prevNode;
+    }
+
+    public ListNode reverseListWithRecursive(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+
+        ListNode reversedSublist = reverseListWithRecursive(head.next);
+        head.next.next = head;
+        head.next = null;
+
+        return reversedSublist;
     }
 }
