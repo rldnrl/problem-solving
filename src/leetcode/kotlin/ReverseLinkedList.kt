@@ -1,13 +1,13 @@
 package leetcode.kotlin
 
-class LinkNode(val value: Int) {
-    var next: LinkNode? = null
+class ListNode(val value: Int) {
+    var next: ListNode? = null
 }
 
 class ReverseLinkedList {
-    fun reverseLinkedListWithIterative(head: LinkNode?): LinkNode? {
-        var prevNode: LinkNode? = null
-        var currNode: LinkNode? = head
+    fun reverseLinkedListWithIterative(head: ListNode?): ListNode? {
+        var prevNode: ListNode? = null
+        var currNode: ListNode? = head
 
         while (currNode != null) {
             val nextNode = currNode.next
@@ -17,5 +17,17 @@ class ReverseLinkedList {
         }
 
         return prevNode
+    }
+
+    fun reverseLinkedListWithRecursive(head: ListNode?): ListNode? {
+        if (head == null || head?.next == null) {
+            return head
+        }
+
+        val reversedSublist: ListNode? = reverseLinkedListWithRecursive(head.next)
+        head.next!!.next = head
+        head.next = null
+
+        return reversedSublist
     }
 }
