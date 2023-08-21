@@ -1,6 +1,6 @@
 package leetcode.kotlin
 
-class ListNode(val value: Int) {
+class ListNode(val value: Int = 0) {
     var next: ListNode? = null
 }
 
