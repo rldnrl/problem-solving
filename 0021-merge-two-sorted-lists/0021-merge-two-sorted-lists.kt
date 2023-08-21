@@ -9,25 +9,28 @@
  */
 class Solution {
     fun mergeTwoLists(list1: ListNode?, list2: ListNode?): ListNode? {
-        val head = ListNode()
-        var tail = head
-        
+        if (list1 == null) {
+            return list2
+        }
+        if (list2 == null) {
+            return list1
+        }
+
+
+        val head: ListNode
         var currentL1 = list1
         var currentL2 = list2
-        
-        while (currentL1 != null && currentL2 != null) {
-            if (currentL1.`val` < currentL2.`val`) {
-                tail.next = currentL1
-                currentL1 = currentL1.next
-            } else {
-                tail.next = currentL2
-                currentL2 = currentL2.next
-            }
-            tail = tail.next
+
+        if (currentL1.`val` < currentL2.`val`) {
+            head = currentL1
+            currentL1 = currentL1.next
+        } else {
+            head = currentL2
+            currentL2 = currentL2.next
         }
-        
-        tail.next = if (currentL1 == null) currentL2 else currentL1
-        
-        return head.next
+
+        head.next = mergeTwoLists(currentL1, currentL2)
+
+        return head
     }
 }
