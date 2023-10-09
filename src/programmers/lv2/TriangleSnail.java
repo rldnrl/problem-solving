@@ -51,8 +51,8 @@ public class TriangleSnail {
         return answer;
     }
 
-    static final int[] dx = new int[]{0, 1, -1};
-    static final int[] dy = new int[]{1, 0, -1};
+    static final int[] dx = {0, 1, -1};
+    static final int[] dy = {1, 0, -1};
 
     public static int[] solution2(int n) {
         int[][] triangle = new int[n][n];
