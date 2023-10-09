@@ -11,7 +11,6 @@ public class CheckDistanceTest {
         String[][] input1 = {{"POOOP", "OXXOX", "OPXPX", "OOXOX", "POXXP"}, {"POOPX", "OXPXP", "PXXXO", "OXXXO", "OOOPP"}, {"PXOPX", "OXOXP", "OXPOX", "OXXOP", "PXPOX"}, {"OOOXX", "XOOOX", "OOOXX", "OXOOX", "OOOOO"}, {"PXPXP", "XPXPX", "PXPXP", "XPXPX", "PXPXP"}};
         int[] answer = {1, 0, 1, 1, 1};
         CheckDistance checkDistance = new CheckDistance();
-        System.out.println(Arrays.toString(checkDistance.solution(input1)));
         Assertions.assertArrayEquals(checkDistance.solution(input1), answer);
     }
 }
