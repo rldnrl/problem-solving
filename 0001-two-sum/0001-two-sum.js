@@ -4,13 +4,12 @@
  * @return {number[]}
  */
 var twoSum = function(nums, target) {
-    const map = new Map();
-    
     for (let i = 0; i < nums.length; i++) {
-        if (map.has(target - nums[i])) {
-            return [i, map.get(target - nums[i])]
-        }
+        const num = nums[i]
+        const complement = target - num
         
-        map.set(nums[i], i)
+        if (nums.slice(i + 1).includes(complement)) {
+            return [nums.indexOf(num), nums.slice(i + 1).indexOf(complement) + (i + 1)]
+        }
     }
 };
