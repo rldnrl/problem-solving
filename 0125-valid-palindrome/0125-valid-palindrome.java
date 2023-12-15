@@ -1,12 +1,19 @@
 class Solution {
     public boolean isPalindrome(String s) {
-        StringBuilder builder = new StringBuilder();
+        Deque<Character> strs = new ArrayDeque<>();
+        
         for (char c: s.toCharArray()) {
             if (Character.isAlphabetic(c) || Character.isDigit(c)) {
-                builder.append(Character.toLowerCase(c));
+                strs.add(Character.toLowerCase(c));
             }
         }
         
-        return Objects.equals(builder.toString(), builder.reverse().toString());
+        while (strs.size() > 1) {
+            if (strs.pollFirst() != strs.pollLast()) {
+                return false;
+            }
+        }
+        
+        return true;
     }
 }
