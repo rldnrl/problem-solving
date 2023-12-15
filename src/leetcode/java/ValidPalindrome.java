@@ -1,6 +1,9 @@
 package leetcode.java;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
 import java.util.Objects;
+import java.util.Queue;
 
 public class ValidPalindrome {
     public static String removeNonCharacter(String s) {
@@ -34,5 +37,23 @@ public class ValidPalindrome {
         }
 
         return Objects.equals(builder.toString(), builder.reverse().toString());
+    }
+
+    public static boolean isPalindrome3(String s) {
+        Deque<Character> strs = new ArrayDeque<>();
+
+        for (char c: s.toCharArray()) {
+            if (Character.isAlphabetic(c) || Character.isDigit(c)) {
+                strs.add(Character.toLowerCase(c));
+            }
+        }
+
+        while (strs.size() > 1) {
+            if (strs.pollFirst() != strs.pollLast()) {
+                return false;
+            }
+        }
+
+        return true;
     }
 }
