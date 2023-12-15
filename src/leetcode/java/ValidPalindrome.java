@@ -1,5 +1,7 @@
 package leetcode.java;
 
+import java.util.Objects;
+
 public class ValidPalindrome {
     public static String removeNonCharacter(String s) {
         return s.replaceAll("[^A-Za-z0-9]", "");
@@ -21,5 +23,16 @@ public class ValidPalindrome {
         }
 
         return true;
+    }
+
+    public static boolean isPalindrome2(String s) {
+        StringBuilder builder = new StringBuilder();
+        for (char c: s.toCharArray()) {
+            if (Character.isAlphabetic((c)) || Character.isDigit(c)) {
+                builder.append(Character.toLowerCase(c));
+            }
+        }
+
+        return Objects.equals(builder.toString(), builder.reverse().toString());
     }
 }
