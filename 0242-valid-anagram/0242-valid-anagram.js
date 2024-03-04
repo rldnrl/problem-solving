@@ -13,12 +13,12 @@ var isAnagram = function(s, t) {
     const arrayS = Array(LENGTH).fill(0)
     const arrayT = Array(LENGTH).fill(0)
 
-    for (const char of s) {
-        arrayS[char.charCodeAt() - 'a'.charCodeAt()]++
+    for (let i = 0; i < s.length; i++) {
+        arrayS[s[i].charCodeAt() - 'a'.charCodeAt()]++
     }
 
-    for (const char of t) {
-        arrayT[char.charCodeAt() - 'a'.charCodeAt()]++
+    for (let i = 0; i < t.length; i++) {
+        arrayT[t[i].charCodeAt() - 'a'.charCodeAt()]++
     }
 
     for (let i = 0; i < LENGTH; i++) {
