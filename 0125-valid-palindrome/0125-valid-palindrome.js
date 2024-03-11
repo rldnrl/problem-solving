@@ -18,7 +18,7 @@ var isPalindrome = function(s) {
       return array.includes(char.charCodeAt())
     }
 
-    s = s.split("").filter(char => isAlphabet(char) || !isNaN(char)).filter((char) => char !== " ").join("").toLocaleLowerCase().replace()
+    s = s.toLocaleLowerCase().split("").filter(char => isAlphabet(char) || !isNaN(char)).filter((char) => char !== " ").join("")
 
     let left = 0, right = s.length - 1
     while (left <= right) {
