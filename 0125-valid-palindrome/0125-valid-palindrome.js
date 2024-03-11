@@ -3,21 +3,30 @@
  * @return {boolean}
  */
 var isPalindrome = function(s) {
-    const isAlphabet = (s) => /[a-zA-Z]/.test(s)
-    const isNumber = (s) => /[0-9]/.test(s)
+    const LENGTH = 26
 
-    const arr = []
+    const isAlphabet = (char) => {
+      const array = []
+      for (let i = 97; i < 97 + LENGTH; i++) {
+        array.push(i)
+      }
 
-    for (const c of s) {
-        if (isAlphabet(c) || isNumber(c)) {
-            arr.push(c.toLowerCase())
-        }
+      for (let i = 65; i < 65 + LENGTH; i++) {
+        array.push(i)
+      }
+
+      return array.includes(char.charCodeAt())
     }
 
-    while (arr.length > 1) {
-        if (arr.shift() !== arr.pop()) {
-            return false
-        }
+    s = s.split("").filter(char => isAlphabet(char) || !isNaN(char)).filter((char) => char !== " ").join("").toLocaleLowerCase().replace()
+
+    let left = 0, right = s.length - 1
+    while (left <= right) {
+      if (s[left] !== s[right]) {
+        return false;
+      }
+      left++;
+      right--
     }
 
     return true
