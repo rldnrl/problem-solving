@@ -9,7 +9,7 @@ var threeSum = function(nums) {
     const answer = []
     
     for (let i = 0; i < N; i++) {
-        if (i > 0 && nums[i] === nums[i - 1]) {
+        if (i > 0 && nums[i - 1] === nums[i]) {
             continue
         }
         
