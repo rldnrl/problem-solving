@@ -14,7 +14,7 @@ var isValid = function(s) {
     for (const c of s) {
         if (!map.has(c)) {
             stack.push(c)
-        } else if (stack.length === 0 || map.get(c) !== stack.pop()) {
+        } else if (stack.length === 0 || stack.pop() !== map.get(c)) {
             return false
         }
     }
