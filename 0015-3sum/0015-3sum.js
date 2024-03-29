@@ -6,6 +6,7 @@ var threeSum = function(nums) {
     nums.sort((a, b) => a - b)
     
     const N = nums.length
+    
     const answer = []
     
     for (let i = 0; i < N; i++) {
@@ -17,6 +18,7 @@ var threeSum = function(nums) {
         let right = N - 1
         while (left < right) {
             const threeSum = nums[i] + nums[left] + nums[right]
+            
             if (threeSum < 0) {
                 left++
             } else if (threeSum > 0) {
@@ -24,7 +26,7 @@ var threeSum = function(nums) {
             } else {
                 answer.push([nums[i], nums[left], nums[right]])
                 left++
-                while (nums[left] === nums[left - 1] && left < right) {
+                while (nums[left - 1] === nums[left] && left < right) {
                     left++
                 }
             }
