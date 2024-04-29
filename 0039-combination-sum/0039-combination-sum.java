@@ -5,7 +5,7 @@ class Solution {
             return;
         } else if (remain < 0) {
             return;
-        } 
+        }
         
         for (int i = start; i < candidates.length; i++) {
             comb.add(candidates[i]);
@@ -13,12 +13,12 @@ class Solution {
             comb.removeLast();
         }
     }
-    
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
-        List<List<Integer>> results = new ArrayList<List<Integer>>();
+        List<List<Integer>> answer = new ArrayList<List<Integer>>();
         LinkedList<Integer> comb = new LinkedList<Integer>();
         
-        backtrack(target, comb, 0, candidates, results);
-        return results;
+        backtrack(target, comb, 0, candidates, answer);
+        
+        return answer;
     }
 }
