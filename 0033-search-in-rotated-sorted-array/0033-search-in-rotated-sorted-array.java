@@ -1,26 +1,26 @@
 class Solution {
     public int search(int[] nums, int target) {
-        int left = 0;
-        int right = nums.length - 1;
+        int startIndex = 0;
+        int endIndex = nums.length - 1;
         
-        while (left <= right) {
-            int middle = (left + right) / 2;
+        while (startIndex <= endIndex) {
+            int middleIndex = (startIndex + endIndex) / 2;
             
-            if (target == nums[middle]) {
-                return middle;
+            if (nums[middleIndex] == target) {
+                return middleIndex;
             }
             
-            if (nums[left] <= nums[middle]) {
-                if (target < nums[left] || target > nums[middle]) {
-                    left = middle + 1;
+            if (nums[startIndex] <= nums[middleIndex]) {
+                if (target < nums[startIndex] || target > nums[middleIndex]) {
+                    startIndex = middleIndex + 1;
                 } else {
-                    right = middle - 1;
+                    endIndex = middleIndex - 1;
                 }
             } else {
-                if (target > nums[right] || target < nums[middle]) {
-                    right = middle - 1;
+                if (target > nums[endIndex] || target < nums[middleIndex]) {
+                    endIndex = middleIndex - 1;
                 } else {
-                    left = middle + 1;
+                    startIndex = middleIndex;
                 }
             }
         }
